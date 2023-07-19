@@ -203,7 +203,8 @@ header {
   gap: 1.6rem;
   color: var(--heading-text-color);
 }
-.socials ul li a {
+.social-icons:link,
+.social-icons:visited {
   color: var(--heading-text-color);
 }
 
