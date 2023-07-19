@@ -203,6 +203,9 @@ header {
   gap: 1.6rem;
   color: var(--heading-text-color);
 }
+.socials ul li a {
+  color: var(--heading-text-color);
+}
 
 .hero-image img {
   width: 300px;
@@ -214,8 +217,8 @@ header {
 
 .social-icons {
   font-size: 2rem;
-  color: var(--heading-text-color);
   cursor: pointer;
+  color: var(--heading-text-color);
 }
 
 .social-icons:hover {
