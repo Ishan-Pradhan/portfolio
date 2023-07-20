@@ -217,7 +217,12 @@ header {
   height: 300px;
   object-fit: cover;
   border-radius: 50%;
-  border: 3px solid var(--heading-text-color);
+  border: 5px solid var(--heading-text-color);
+  transition: all 0.3s ease;
+}
+.hero-image img:hover {
+  border-style: dashed;
+  transform: scale(1.05);
 }
 
 .social-icons {
