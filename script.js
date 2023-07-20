@@ -25,3 +25,26 @@ const sections = document.querySelectorAll(".scroll");
 sections.forEach((section) => {
   section.style.scrollMarginTop = `${nav_height}px`;
 });
+
+const burgerMenu = document.querySelector(".burger-menu");
+const navLinks = document.querySelector(".nav-links");
+
+// Function to hide the menu
+function hideMenu() {
+  navLinks.classList.remove("active");
+}
+
+// Toggle menu on burger menu click
+burgerMenu.addEventListener("click", function () {
+  navLinks.classList.toggle("active");
+});
+
+// Event listener for each link to hide menu when clicked
+const navLinksContainer = document.querySelector(".nav-links-container");
+const links = navLinksContainer.querySelectorAll("a");
+
+links.forEach((link) => {
+  link.addEventListener("click", function () {
+    hideMenu();
+  });
+});
