@@ -221,7 +221,6 @@ header {
   transition: all 0.3s ease;
 }
 .hero-image img:hover {
-  border-style: dashed;
   transform: scale(1.05);
 }
 
@@ -404,4 +403,158 @@ footer h2 {
   font-family: "Azeret Mono";
   font-size: 18px;
   font-weight: 100;
+}
+
+@media (max-width: 767px) {
+  header {
+    padding: 1rem 2rem;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    position: absolute;
+    top: 5.5rem;
+    left: 2rem;
+    background-color: var(--header-bg);
+    box-shadow: 0 2.4px 4.8px rgba(0, 0, 0, 0.075);
+    border-radius: 8px;
+    padding: 1rem;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .nav-links ul li {
+    text-align: center;
+  }
+
+  .nav-links ul li a {
+    display: block;
+    padding: 0.5rem 0;
+  }
+
+  .logo {
+    height: 2rem;
+  }
+
+  .hero {
+    flex-direction: column;
+    gap: 3rem;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .hero-image img {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+  }
+
+  .section-About-me {
+    padding: 2rem;
+  }
+
+  .about-me-container {
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .about-me-image {
+    width: 12rem;
+    border-radius: 8px;
+  }
+
+  .section-my-works {
+    padding: 1.5rem;
+  }
+
+  .my-work-container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .work-image {
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  .work-text-container {
+    text-align: center;
+  }
+
+  .section-contact {
+    padding: 2rem;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .c-icon {
+    font-size: 2rem;
+  }
+}
+
+/* For screens between 768px and 1023px (e.g., tablets) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  header {
+    padding: 1.5rem 2rem;
+  }
+
+  .nav-links ul li a {
+    padding: 0.5rem;
+  }
+
+  .nav-links {
+    gap: 2rem;
+  }
+
+  .logo {
+    height: 2.5rem;
+  }
+
+  .hero {
+    padding: 4rem;
+  }
+
+  .hero-image img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .about-me-container {
+    gap: 3rem;
+  }
+
+  .about-me-image {
+    width: 15rem;
+  }
+
+  .my-work-container {
+    gap: 3rem;
+  }
+
+  .work-image {
+    width: 300px;
+    height: 200px;
+  }
+
+  .contact-container {
+    gap: 2rem;
+  }
+
+  .c-icon {
+    font-size: 2.5rem;
+  }
 }
