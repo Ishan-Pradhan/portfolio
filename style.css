@@ -106,7 +106,7 @@ body {
   text-align: center;
   margin-bottom: 2.5rem;
 }
-
+/* ############# NAV ############# */
 header {
   display: flex;
   justify-content: space-between;
@@ -171,6 +171,7 @@ header {
   background-color: var(--sub-bg);
 }
 
+/* ############# HERO ############# */
 .section-hero {
   padding: 10rem 0 10rem 0;
   display: flex;
@@ -248,10 +249,16 @@ header {
 .tech-stacks-container {
   display: flex;
   justify-content: center;
+  margin-bottom: 3rem;
+}
+
+/* ############# TECH STACK ############# */
+.tech-heading {
+  display: none;
 }
 .tech-stacks {
   display: flex;
-  margin-bottom: 3rem;
+
   justify-content: center;
   align-items: center;
   gap: 2rem;
@@ -275,6 +282,7 @@ header {
   transform: translateY(-50px) rotate(-30deg) scale(1.1);
 }
 
+/* ############# ABOUT ME ############# */
 .section-About-me {
   padding: 0 12rem;
 }
@@ -298,6 +306,7 @@ header {
   row-gap: 1rem;
 }
 
+/* ############# MY WORKS ############# */
 .section-my-works {
   padding: 3.2rem 4.6rem;
   background-color: var(--main-color);
@@ -334,6 +343,10 @@ header {
   border-radius: 18px;
 }
 
+.work-image:hover {
+  filter: brightness(0.7);
+}
+
 .work-text-container {
   display: flex;
   flex-direction: column;
@@ -351,7 +364,7 @@ header {
   line-height: 1.6;
 }
 
-/* Contacts */
+/* ############# CONTACTS ############# */
 .section-contact {
   max-width: 80rem;
   padding: 0 4rem;
@@ -402,6 +415,7 @@ header {
   font-size: 14px;
 }
 
+/* ############# FOOTER ############# */
 footer {
   background-color: #4f4f4f;
   height: 3rem;
@@ -433,9 +447,20 @@ footer h2 {
     right: 1rem;
   }
 
-  .tech-stacks-container {
-    opacity: 0;
+  .burger-menu {
+    transition: all 0.2s ease;
+  }
+
+  .burger-menu .fa-times {
     display: none;
+  }
+
+  .burger-menu.active .fa-bars {
+    display: none;
+  }
+
+  .burger-menu.active .fa-times {
+    display: block;
   }
 
   .nav-links {
@@ -452,8 +477,6 @@ footer h2 {
     border-radius: 8px;
     padding: 1rem;
   }
-
-  /* Styling for the Font Awesome icon */
 
   .nav-links.active {
     display: flex;
@@ -495,6 +518,35 @@ footer h2 {
     justify-content: center;
   }
 
+  .tech-heading {
+    display: block;
+  }
+
+  .tech-stacks-container {
+    margin-top: 3rem;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .tech-stacks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    box-shadow: none;
+    position: relative;
+    transform: translate(0, 0);
+    padding: 2rem 4rem;
+    gap: 1rem;
+  }
+
+  .tech-stacks img {
+    align-self: center;
+    flex-basis: calc(33.33% - 1rem);
+    margin-bottom: 1rem;
+  }
+
   .section-About-me {
     padding: 2rem;
   }
@@ -518,6 +570,10 @@ footer h2 {
   .my-work-container {
     flex-direction: column;
     gap: 1.5rem;
+  }
+
+  .even {
+    flex-direction: column-reverse;
   }
 
   .work-image {
@@ -545,7 +601,7 @@ footer h2 {
   }
 }
 
-/* For screens between 768px and 1023px (e.g., tablets) */
+/* For screens between 768px and 1023px (tablets) */
 @media (min-width: 630px) and (max-width: 1023px) {
   header {
     padding: 1.5rem 2rem;
