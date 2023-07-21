@@ -177,7 +177,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
   background-color: var(--main-color);
 }
 
@@ -500,6 +500,11 @@ footer h2 {
     height: 2rem;
   }
 
+  .section-hero {
+    padding-top: 5rem;
+    padding-bottom: 0;
+  }
+
   .hero {
     flex-direction: column;
     gap: 3rem;
@@ -601,15 +606,17 @@ footer h2 {
   }
 }
 
+@media (max-width: 667px) and (max-height: 375px) and (orientation: landscape) {
+  .section-hero {
+    padding: 4rem 2rem;
+    height: 450px;
+  }
+}
+
 /* For screens between 768px and 1023px (tablets) */
 @media (min-width: 768px) and (max-width: 1023px) {
   header {
     padding: 1.5rem 2rem;
-  }
-
-  .tech-stacks-container {
-    opacity: 0;
-    display: none;
   }
 
   .nav-links ul li a {
