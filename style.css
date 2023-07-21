@@ -52,14 +52,14 @@ medium: 11;
 */
 
 :root {
-  --main-color: #a2d2ff;
-  --header-bg: #f6fbff;
-  --background-color: #ecf6ff;
-  --heading-text-color: #101519;
+  --main-color: #cee7fe;
+  --header-bg: #f5faff;
+  --background-color: #fafdff;
+  --heading-text-color: #151719;
   --light-text-color: #313f4c;
   --sub-heading-color: #7193b3;
-  --accent-color: #02a4ff;
-  --sub-bg: #e3f2ff;
+  --accent-color: #51bffe;
+  --sub-bg: #f0f8ff;
 }
 
 * {
@@ -173,7 +173,7 @@ header {
 
 /* ############# HERO ############# */
 .section-hero {
-  padding: 10rem 0 10rem 0;
+  padding: 10rem 0 5rem 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -226,8 +226,8 @@ header {
 }
 
 .hero-image img {
-  width: 300px;
-  height: 300px;
+  width: 350px;
+  height: 350px;
   object-fit: cover;
   border-radius: 50%;
   border: 5px solid var(--heading-text-color);
