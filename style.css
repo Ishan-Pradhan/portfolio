@@ -246,13 +246,13 @@ header {
 .social-icons:hover {
   color: var(--accent-color);
 }
+/* ############# TECH STACK ############# */
 .tech-stacks-container {
   display: flex;
   justify-content: center;
   margin-bottom: 3rem;
 }
 
-/* ############# TECH STACK ############# */
 .tech-heading {
   display: none;
 }
