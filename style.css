@@ -431,7 +431,7 @@ footer h2 {
   font-weight: 100;
 }
 /* For mobile */
-@media (max-width: 630px) {
+@media (max-width: 768px) {
   header {
     padding: 1rem 2rem;
   }
@@ -602,7 +602,7 @@ footer h2 {
 }
 
 /* For screens between 768px and 1023px (tablets) */
-@media (min-width: 630px) and (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   header {
     padding: 1.5rem 2rem;
   }
