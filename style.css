@@ -336,6 +336,7 @@ header {
   padding: 2rem;
   display: flex;
   gap: 10.2rem;
+  align-items: center;
 }
 
 .work-image {
@@ -430,6 +431,32 @@ footer h2 {
   font-size: 18px;
   font-weight: 100;
 }
+
+strong {
+  font-weight: 500;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--sub-heading-color);
+  border-radius: 100px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--heading-text-color);
+}
+
 /* For mobile */
 @media (max-width: 768px) {
   header {
