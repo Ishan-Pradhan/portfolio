@@ -115,9 +115,28 @@ header {
   height: auto;
   width: 100%;
   padding: 1.6rem 3.6rem;
-  position: fixed;
+  position: absolute;
   top: 0;
+  left: 0;
   z-index: 100000;
+}
+
+.sticky {
+  position: fixed;
+  opacity: 0;
+  animation: headeranimation 0.5s ease-in forwards 0.8s;
+}
+
+@keyframes headeranimation {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .logo {
@@ -194,6 +213,20 @@ header {
 .text-contents {
   display: flex;
   flex-direction: column;
+  opacity: 0;
+  animation: heroanimation 0.5s ease-in forwards 0.8s;
+}
+
+@keyframes heroanimation {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .main-heading {
@@ -340,7 +373,7 @@ header {
   background-color: var(--sub-bg);
   padding: 2rem;
   display: flex;
-  gap: 10.2rem;
+  gap: 3.2rem;
   align-items: center;
 }
 
@@ -397,6 +430,8 @@ header {
 .location-content {
   display: flex;
   gap: 1.2rem;
+  align-items: center;
+  justify-content: center;
 }
 
 .c-icon {
@@ -419,6 +454,15 @@ header {
 .location-texts h4 {
   font-weight: 100;
   font-size: 14px;
+}
+
+.email h4 a {
+  text-decoration: none;
+  color: #333;
+}
+
+.email h4 a:hover {
+  color: var(--sub-heading-color);
 }
 
 /* ############# FOOTER ############# */
@@ -696,4 +740,13 @@ strong {
   .c-icon {
     font-size: 2.5rem;
   }
+}
+
+.section {
+  transition: transform 1s, opacity 1s, filter 0.5s ease-in-out;
+}
+
+.section--hidden {
+  opacity: 0;
+  transform: translateY(8rem);
 }
