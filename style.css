@@ -69,10 +69,10 @@ medium: 11;
 }
 
 body {
-  font-family: "Azeret Mono";
+  font-family: "Varela Round";
   line-height: 1;
   font-weight: 400;
-  color: #101519;
+  color: #333333;
 }
 
 .burger-menu {
@@ -94,7 +94,7 @@ body {
 
 .heading {
   line-height: 1.2;
-  font-family: "rubik";
+  font-family: "Quicksand";
   font-size: 28px;
 }
 
@@ -102,7 +102,7 @@ body {
   color: var(--sub-heading-color);
   text-transform: uppercase;
   font-size: 20px;
-  font-family: "rubik";
+  font-family: "Quicksand";
   text-align: center;
   margin-bottom: 2.5rem;
 }
@@ -130,7 +130,7 @@ header {
   display: flex;
   gap: 3.2rem;
   font-size: 1.125rem;
-  font-family: "Rubik", sans-serif;
+  font-family: "Quicksand", sans-serif;
   font-weight: 600;
   justify-content: center;
   align-items: center;
@@ -159,8 +159,8 @@ header {
   border-radius: 100px;
   background-color: var(--accent-color);
   border: none;
-  font-weight: 500;
-  font-family: "rubik";
+  font-weight: 700;
+  font-family: "Quicksand";
   font-size: 1rem;
   border: 1px solid rgba(0, 0, 0, 0);
   cursor: pointer;
@@ -197,7 +197,7 @@ header {
 }
 
 .main-heading {
-  font-family: "Rubik", sans-serif;
+  font-family: "Quicksand", sans-serif;
   font-size: 3rem;
   font-weight: 600;
   margin-bottom: 0.9rem;
@@ -229,6 +229,7 @@ header {
   width: 350px;
   height: 350px;
   object-fit: cover;
+  object-position: center;
   border-radius: 50%;
   border: 5px solid var(--heading-text-color);
   transition: all 0.3s ease;
@@ -308,7 +309,7 @@ header {
 
 /* ############# MY WORKS ############# */
 .section-my-works {
-  padding: 3.2rem 4.6rem;
+  padding: 3.2rem 12rem;
   background-color: var(--main-color);
   margin-bottom: 3rem;
 }
@@ -328,8 +329,12 @@ header {
   gap: 2rem;
 }
 
+.work-heading {
+  color: #151719;
+}
+
 .my-work-container {
-  max-width: 80rem;
+  max-width: 65rem;
   margin: auto;
   border-radius: 18px;
   background-color: var(--sub-bg);
@@ -355,7 +360,7 @@ header {
 }
 
 .work-heading {
-  font-family: "rubik";
+  font-family: "Quicksand";
   font-size: 20px;
   text-align: center;
 }
@@ -367,7 +372,7 @@ header {
 
 /* ############# CONTACTS ############# */
 .section-contact {
-  max-width: 80rem;
+  max-width: 65rem;
   padding: 0 4rem;
   margin: auto;
   margin-bottom: 3rem;
@@ -385,7 +390,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 3rem;
+  padding: 3rem 0;
   margin: auto;
 }
 
@@ -406,7 +411,7 @@ header {
 }
 
 .location-texts h3 {
-  font-family: "rubik";
+  font-family: "Quicksand";
   font-weight: 600;
   font-size: 18px;
 }
