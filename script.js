@@ -25,10 +25,18 @@ sections.forEach((section) => {
 // FOR ALERT
 
 document.querySelector(".download-cv").addEventListener("click", function () {
-  alert(
-    "I don't have a resume right now, but I'm working on creating one. Soon, I'll have a great resume to show to potential employers. Thanks for your patience, and stay tuned for updates! 😄 🛠️ 🚀"
-  );
+  showAlert();
 });
+
+function showAlert() {
+  var overlay = document.getElementById("overlay");
+  overlay.style.display = "block";
+}
+
+function closeAlert() {
+  var overlay = document.getElementById("overlay");
+  overlay.style.display = "none";
+}
 
 // FOR BURGER MENU
 

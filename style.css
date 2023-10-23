@@ -89,7 +89,7 @@ body {
 .container {
   max-width: 107rem;
   padding: 0 3.2rem;
-  margin: 0 auto 8rem auto;
+  margin: 0 auto 3rem auto;
 }
 
 .heading {
@@ -118,7 +118,7 @@ header {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 100000;
+  z-index: 1;
 }
 
 .sticky {
@@ -313,7 +313,7 @@ header {
 
 .tech-stacks img:hover,
 .tech-stacks img:active {
-  transform: translateY(-50px) rotate(-30deg) scale(1.1);
+  transform: rotate(-30deg) scale(1.5);
 }
 
 /* ############# ABOUT ME ############# */
@@ -628,6 +628,11 @@ strong {
     margin-bottom: 1rem;
   }
 
+  .tech-stacks img:hover,
+  .tech-stacks img:active {
+    transform: none;
+  }
+
   .section-About-me {
     padding: 2rem;
   }
@@ -635,7 +640,6 @@ strong {
   .about-me-container {
     flex-direction: column;
     gap: 2rem;
-    text-align: center;
   }
 
   .about-me-image {
@@ -650,7 +654,7 @@ strong {
 
   .my-work-container {
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 2rem;
   }
 
   .even {
@@ -662,8 +666,8 @@ strong {
     border-radius: 8px;
   }
 
-  .work-text-container {
-    text-align: center;
+  .work-heading {
+    text-align: left;
   }
 
   .section-contact {
@@ -674,7 +678,7 @@ strong {
     align-items: flex-start;
     flex-direction: column;
     gap: 2rem;
-    /* text-align: center; */
+    padding: 3rem;
   }
 
   .c-icon {
@@ -735,6 +739,7 @@ strong {
 
   .contact-container {
     gap: 2rem;
+    padding: 0 2rem;
   }
 
   .c-icon {
@@ -749,4 +754,49 @@ strong {
 .section--hidden {
   opacity: 0;
   transform: translateY(8rem);
+}
+
+/* Styles for the overlay background */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+/* Styles for the custom alert box */
+.alert-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  z-index: 2;
+  border-radius: 24px;
+  line-height: 150%;
+}
+
+.alert-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+/* Close button style */
+.close-btn {
+  cursor: pointer;
+  font-size: 32px;
+  color: rgb(255, 103, 103);
+}
+
+.close-btn:hover {
+  color: rgb(255, 156, 156);
 }
