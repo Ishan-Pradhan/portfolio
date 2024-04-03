@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
     <title>Ishan Pradhan</title>
     <link rel="icon" href="images/logo.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,6 +17,10 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
       rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <script
       src="https://kit.fontawesome.com/144a91ca19.js"
@@ -74,9 +81,9 @@
         <img src="images/logos/html.svg" alt="" />
         <img src="images/logos/css.svg" alt="" />
         <img src="images/logos/js.svg" alt="" />
-        <img src="images/logos/java.svg" alt="" />
+        <img src="images/logos/react.png" alt="" />
         <img src="images/logos/php.svg" alt="" />
-        <img src="images/logos/python.svg" alt="" />
+        <img src="images/logos/tailwind.png" alt="" />
       </div>
     </section>
     <section id="about-me" class="section-About-me container scroll section">
@@ -108,64 +115,77 @@
         </div>
       </div>
     </section>
+
     <section id="my-works" class="section-my-works scroll section">
       <h1 class="sub-heading">my works</h1>
       <h1 class="heading">Embarking on a journey of Growth</h1>
       <div class="work-contents">
-        <div class="my-work-container">
-          <a href="https://github.com/Ishan-Pradhan/Kimdo---Hotel-Reservation"
-            ><img src="images/placeholder.png" alt="" class="work-image"
-          /></a>
-          <div class="work-text-container">
-            <h1 class="work-heading">Kimdo Hotel🛎️</h1>
-            <p class="paragraph">
-              Developed a small-scale hotel reservation website project for
-              Kimdo Hotel using PHP. Created a user-friendly interface allowing
-              room searches, real-time availability checks, and easy
-              reservations. Although not sold, the project showcases my skills
-              in web development and highlights the potential for enhancing
-              Kimdo Hotel's online booking experience in the future.
-            </p>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="my-work-container">
+                <a
+                  href="https://github.com/Ishan-Pradhan/Kimdo---Hotel-Reservation"
+                  ><img src="images/placeholder.png" alt="" class="work-image"
+                /></a>
+                <div class="work-text-container">
+                  <h1 class="work-heading">Kimdo Hotel🛎️</h1>
+                  <p class="paragraph">
+                    Developed a small-scale hotel reservation website project
+                    for Kimdo Hotel using PHP. Created a user-friendly interface
+                    allowing room searches, real-time availability checks, and
+                    easy reservations. Although not sold, the project showcases
+                    my skills in web development and highlights the potential
+                    for enhancing Kimdo Hotel's online booking experience in the
+                    future.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="my-work-container even section swiper-slide">
+                <div class="work-text-container">
+                  <h1 class="work-heading">Great Compassion Fund 🙏</h1>
+                  <p class="paragraph">
+                    Together with my friend, we created the Great Compassion
+                    Fund website, a fully functional platform showcasing our web
+                    development skills. Our user-friendly funding website is
+                    dedicated to helping people in need and informing visitors
+                    about our organization's mission.
+                  </p>
+                </div>
+                <a href="https://greatcompassionfund.org"
+                  ><img
+                    src="images/gcfplaceholder.png"
+                    alt=""
+                    class="work-image"
+                /></a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="my-work-container section swiper-slide">
+                <a href="https://github.com/Ishan-Pradhan/kimdo-pashmina-rework"
+                  ><img
+                    src="images/kimdopashminaplaceholder.png"
+                    alt=""
+                    class="work-image"
+                /></a>
+                <div class="work-text-container">
+                  <h1 class="work-heading">Kimdo Pashmina 🧣</h1>
+                  <p class="paragraph">
+                    Developed an ecommerce website for Kimdo Pashmina using the
+                    MERN stack. Integrated a user-friendly interface for
+                    browsing luxurious pashmina products, checking availability,
+                    and completing secure purchases. Demonstrates expertise in
+                    full-stack development and enhances Kimdo Pashmina's online
+                    presence, offering customers a seamless shopping experience.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-
-        <div class="my-work-container even section">
-          <div class="work-text-container">
-            <h1 class="work-heading">Great Compassion Fund 🙏</h1>
-            <p class="paragraph">
-              Together with my friend, we created the Great Compassion Fund
-              website, a fully functional platform showcasing our web
-              development skills. Our user-friendly funding website is dedicated
-              to helping people in need and informing visitors about our
-              organization's mission. It offers an easy and seamless experience
-              for both donors and beneficiaries, illustrating our commitment to
-              a wide range of causes and our vision of a more compassionate
-              world.
-            </p>
-          </div>
-          <a href="https://greatcompassionfund.org"
-            ><img src="images/gcfplaceholder.png" alt="" class="work-image"
-          /></a>
-        </div>
-
-        <div class="my-work-container section">
-          <a href="https://github.com/Ishan-Pradhan/kimdo-pashmina-rework"
-            ><img
-              src="images/kimdopashminaplaceholder.png"
-              alt=""
-              class="work-image"
-          /></a>
-          <div class="work-text-container">
-            <h1 class="work-heading">Kimdo Pashmina 🧣</h1>
-            <p class="paragraph">
-              Developed an ecommerce website for Kimdo Pashmina using the MERN
-              stack. Integrated a user-friendly interface for browsing luxurious
-              pashmina products, checking availability, and completing secure
-              purchases. Demonstrates expertise in full-stack development and
-              enhances Kimdo Pashmina's online presence, offering customers a
-              seamless shopping experience.
-            </p>
-          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
         </div>
       </div>
     </section>
@@ -199,17 +219,33 @@
     <div id="overlay" class="overlay">
       <div id=" AlertBox" class="alert-box">
         <div class="alert-head">
-          <h2>Sorry😓</h2>
+          <h2>Hey everyone!</h2>
           <span class="close-btn" onclick="closeAlert()">&times;</span>
         </div>
 
         <p>
-          I don't have a resume right now, but I'm working on creating one.
-          Soon, I'll have a great resume to show to potential employers. Thanks
-          for your patience, and stay tuned for updates! 😄 🛠️ 🚀
+          <span class="bold-font">Quick update</span>: I'm in the process of
+          creating my resume. It's a work in progress, but I'm excited to share
+          it with you soon!
+          <br />
+          Thanks for your patience while I put everything together. Stay tuned
+          for updates!
+          <br />
+          Appreciate your support! 😄 🛠️ 🚀
         </p>
       </div>
     </div>
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 50,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
   </body>
 </html>

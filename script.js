@@ -88,3 +88,44 @@ window.addEventListener("scroll", function () {
 
   nav.classList.toggle("sticky", window.scrollY > 100);
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Select all sections
+  const sections = document.querySelectorAll("section");
+  // Select all navigation links
+  const navLinks = document.querySelectorAll(".nav-link");
+
+  // Function to update the active class on navigation links
+  const updateActiveLink = () => {
+    console.log("updateActiveLink called"); // Debugging line
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+      if (pageYOffset >= sectionTop - sectionHeight / 3) {
+        const id = section.getAttribute("id");
+        console.log("Section in view:", id); // Debugging line
+        navLinks.forEach((navLink) => {
+          if (navLink.getAttribute("href") === `#${id}`) {
+            navLink.classList.add("active");
+          } else {
+            navLink.classList.remove("active");
+          }
+        });
+      }
+    });
+  };
+
+  // Set up the Intersection Observer
+  const observer = new IntersectionObserver(updateActiveLink, {
+    root: null,
+    threshold: 0.1,
+  });
+
+  // Observe each section
+  sections.forEach((section) => {
+    observer.observe(section);
+  });
+
+  // Update the active link when the page loads
+  updateActiveLink();
+});
