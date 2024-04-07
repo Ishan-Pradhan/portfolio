@@ -114,7 +114,7 @@ header {
   background-color: var(--header-bg);
   height: auto;
   width: 100%;
-  padding: 1.6rem 3.6rem;
+  padding: 1rem 6rem;
   position: absolute;
   top: 0;
   left: 0;
@@ -206,21 +206,21 @@ header {
 
 /* ############# HERO ############# */
 .section-hero {
-  padding: 10rem 0 5rem 0;
+  padding: 10rem 6rem 5rem 6rem;
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
   background-color: var(--main-color);
+  margin: 0 auto !important;
 }
 
 .hero {
   max-width: 1300px;
   margin: auto;
-  padding: 0 8.2rem;
   display: flex;
   justify-content: space-between;
-  gap: 9.6rem;
+  gap: 4.4rem;
   align-items: center;
 }
 
@@ -249,16 +249,24 @@ header {
 
 .main-heading {
   font-family: "Quicksand", sans-serif;
-  font-size: 3rem;
-  font-weight: 600;
+  font-size: 5rem;
+  font-weight: 800;
   margin-bottom: 0.9rem;
 }
 
 .paragraphs {
+  font-size: 1.2rem;
+  font-weight: 100;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+}
+
+.about-me-paragraphs {
   font-size: 1.1rem;
   font-weight: 100;
   line-height: 1.6;
   margin-bottom: 1.2rem;
+  text-align: justify;
 }
 
 .social-links {
@@ -336,25 +344,32 @@ header {
 
 /* ############# ABOUT ME ############# */
 .section-About-me {
-  padding: 0 12rem;
+  padding: 0 6rem;
 }
 
 .about-me-container {
-  max-width: 65rem;
-  margin: auto;
+  /* max-width: 65rem; */
+  /* margin: auto; */
   display: flex;
   justify-content: space-between;
   gap: 5.2rem;
 }
 
-.about-me-image {
+.about-me-image-container {
   width: 50%;
-  height: 26rem;
+  height: 420px;
+}
+
+.about-me-image {
+  width: 100%;
+  height: 100%;
   border-radius: 18px;
+  object-position: bottom;
   object-fit: cover;
 }
 
 .about-me-text-container {
+  width: 50%;
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
@@ -362,7 +377,7 @@ header {
 
 /* ############# MY WORKS ############# */
 .section-my-works {
-  padding: 3.2rem 12rem;
+  padding: 3.2rem 5rem;
   background-color: var(--main-color);
   margin-bottom: 3rem;
 }
@@ -436,7 +451,7 @@ header {
 /* ############# CONTACTS ############# */
 .section-contact {
   max-width: 65rem;
-  padding: 0 4rem;
+  padding: 0 5rem;
   margin: auto;
   margin-bottom: 3rem;
 }
@@ -850,13 +865,4 @@ strong {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.swiper-button-next {
-  right: -1px;
-  position: absolute;
-}
-
-.swiper-button-prev {
-  left: -1px;
 }
