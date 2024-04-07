@@ -551,6 +551,81 @@ strong {
   background: var(--heading-text-color);
 }
 
+.section {
+  transition: transform 1s, opacity 1s, filter 0.5s ease-in-out;
+}
+
+.section--hidden {
+  opacity: 0;
+  transform: translateY(8rem);
+}
+
+/* Styles for the overlay background */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+/* Styles for the custom alert box */
+.alert-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  z-index: 2;
+  border-radius: 18px;
+  line-height: 150%;
+}
+
+.alert-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+/* Close button style */
+.close-btn {
+  cursor: pointer;
+  font-size: 32px;
+  color: rgb(255, 103, 103);
+}
+
+.close-btn:hover {
+  color: rgb(255, 156, 156);
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: var(--main-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  /* display: block; */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 /* For mobile */
 @media (max-width: 768px) {
   header {
@@ -633,6 +708,20 @@ strong {
     padding: 2rem;
   }
 
+  .main-heading {
+    font-family: "Quicksand", sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 0.9rem;
+  }
+
+  .paragraphs {
+    font-size: 1rem;
+    font-weight: 100;
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+  }
+
   .hero-image img {
     width: 200px;
     height: 200px;
@@ -683,14 +772,23 @@ strong {
   }
 
   .about-me-container {
+    width: 100%;
     flex-direction: column;
     gap: 2rem;
   }
 
+  .about-me-image-container {
+    width: 100%;
+  }
+
   .about-me-image {
-    width: 12rem;
     border-radius: 8px;
     margin: auto;
+    object-fit: bottom;
+  }
+
+  .about-me-text-container {
+    width: 100%;
   }
 
   .section-my-works {
@@ -728,6 +826,20 @@ strong {
 
   .c-icon {
     font-size: 2rem;
+  }
+
+  .alert-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    z-index: 10;
+    border-radius: 18px;
+    line-height: 150%;
   }
 }
 
@@ -790,79 +902,18 @@ strong {
   .c-icon {
     font-size: 2.5rem;
   }
-}
 
-.section {
-  transition: transform 1s, opacity 1s, filter 0.5s ease-in-out;
-}
-
-.section--hidden {
-  opacity: 0;
-  transform: translateY(8rem);
-}
-
-/* Styles for the overlay background */
-.overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1;
-}
-
-/* Styles for the custom alert box */
-.alert-box {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 500px;
-  padding: 20px;
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
-  z-index: 2;
-  border-radius: 18px;
-  line-height: 150%;
-}
-
-.alert-head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 20px;
-}
-
-/* Close button style */
-.close-btn {
-  cursor: pointer;
-  font-size: 32px;
-  color: rgb(255, 103, 103);
-}
-
-.close-btn:hover {
-  color: rgb(255, 156, 156);
-}
-
-.swiper {
-  width: 100%;
-  height: 100%;
-}
-
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: var(--main-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.swiper-slide img {
-  /* display: block; */
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  .alert-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    z-index: 2;
+    border-radius: 18px;
+    line-height: 150%;
+  }
 }
