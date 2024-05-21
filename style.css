@@ -703,6 +703,9 @@ strong {
   .section-hero {
     padding-top: 5rem;
     padding-bottom: 0;
+    background-image: url("/images/heroimg.jpg");
+    background-size: cover;
+    background-position: center;
   }
 
   .hero {
@@ -717,6 +720,11 @@ strong {
     font-size: 3rem;
     font-weight: 800;
     margin-bottom: 0.9rem;
+    color: var(--background-color);
+  }
+
+  .hero-paragraph {
+    color: var(--background-color);
   }
 
   .paragraphs {
@@ -735,6 +743,10 @@ strong {
 
   .social-links {
     justify-content: center;
+  }
+
+  .social-links li a i {
+    color: var(--background-color);
   }
 
   .tech-heading {
@@ -806,6 +818,10 @@ strong {
 
   .even {
     flex-direction: column-reverse;
+  }
+
+  .work-image a {
+    height: 500px;
   }
 
   .work-image {
