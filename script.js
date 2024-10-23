@@ -24,19 +24,19 @@ sections.forEach((section) => {
 
 // FOR ALERT
 
-document.querySelector(".download-cv").addEventListener("click", function () {
-  showAlert();
-});
+// document.querySelector(".download-cv").addEventListener("click", function () {
+//   showAlert();
+// });
 
-function showAlert() {
-  var overlay = document.getElementById("overlay");
-  overlay.style.display = "block";
-}
+// function showAlert() {
+//   var overlay = document.getElementById("overlay");
+//   overlay.style.display = "block";
+// }
 
-function closeAlert() {
-  var overlay = document.getElementById("overlay");
-  overlay.style.display = "none";
-}
+// function closeAlert() {
+//   var overlay = document.getElementById("overlay");
+//   overlay.style.display = "none";
+// }
 
 // FOR BURGER MENU
 
