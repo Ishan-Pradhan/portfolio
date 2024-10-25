@@ -103,7 +103,6 @@ document.addEventListener("DOMContentLoaded", function () {
       const sectionHeight = section.clientHeight;
       if (pageYOffset >= sectionTop - sectionHeight / 3) {
         const id = section.getAttribute("id");
-        console.log("Section in view:", id); // Debugging line
         navLinks.forEach((navLink) => {
           if (navLink.getAttribute("href") === `#${id}`) {
             navLink.classList.add("active");

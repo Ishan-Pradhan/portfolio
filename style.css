@@ -217,7 +217,7 @@ header {
 }
 
 .hero {
-  max-width: 1300px;
+  max-width: auto !important;
   margin: auto;
   display: flex;
   justify-content: space-between;
@@ -458,7 +458,6 @@ header {
   max-width: 65rem;
   padding: 0 5rem;
   margin: auto;
-  margin-bottom: 3rem;
 }
 
 .section-contact .sub-heading {
@@ -471,6 +470,7 @@ header {
 
 .contact-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   padding: 3rem 0;
@@ -479,7 +479,9 @@ header {
 
 .location-content {
   display: flex;
+  flex: 1 0 50%;
   gap: 1.2rem;
+  padding: 3rem 0;
   align-items: center;
   justify-content: center;
 }
@@ -518,10 +520,39 @@ header {
 /* ############# FOOTER ############# */
 footer {
   background-color: #4f4f4f;
-  height: 3rem;
+  height: 10rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.footer-socials ul {
+  list-style-type: none;
+  display: flex;
+  gap: 1.6rem;
+  color: var(--main-color);
+  margin-bottom: 25px;
+}
+
+.footer-social-links {
+  color: var(--main-color);
+  font-size: 20px;
+}
+
+.footer-social-icons {
+  color: var(--main-color);
+  font-size: 36px;
+}
+
+.footer-social-icons:link,
+.footer-social-icons:visited {
+  color: var(--main-color);
+}
+
+.footer-social-icons:hover,
+.footer-social-icons:active {
+  color: var(--background-color);
 }
 
 footer h2 {
