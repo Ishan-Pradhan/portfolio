@@ -207,22 +207,23 @@ header {
 
 /* ############# HERO ############# */
 .section-hero {
-  padding: 10rem 6rem 5rem 6rem;
+  padding: 10rem 3rem 5rem 3rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  min-height: 100lvh;
   background-color: var(--main-color);
   margin: 0 auto !important;
 }
 
 .hero {
-  max-width: auto !important;
-  margin: auto;
   display: flex;
   justify-content: space-between;
   gap: 3rem;
   align-items: center;
+  max-width: 107rem;
+  padding: 0 3rem;
+  margin: auto;
 }
 
 .bold-font {
