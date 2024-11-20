@@ -839,7 +839,9 @@ strong {
   }
 
  
-
+  .tech-stack-section{
+    padding: 0;
+  }
  
 
   .section-About-me {
