@@ -311,42 +311,72 @@ header {
 /* ############# TECH STACK ############# */
 .tech-stacks-container {
   display: flex;
+  padding-top: 6rem;
+  flex-direction: column;
   justify-content: center;
-  margin-bottom: 3rem;
+  margin-bottom: 6rem;
+  /* background-color: var(--sub-bg); */
+
 }
 
-.tech-heading {
-  display: none;
+.tech-stack-section{
+max-width: 107rem;
+padding: 0 6rem;
+margin :auto;
 }
-.tech-stacks {
+
+
+.single-tech{
   display: flex;
-
+  height: 12rem;
+  width: 12rem;
+  gap: 0.8rem;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
-  width: auto;
-  padding: 0.5rem 2rem;
-  border-radius: 100px;
-  position: relative;
-  transform: translate(0, -50%);
+  padding: 3rem;
+  border-radius: 18px;
   background-color: var(--sub-bg);
-  box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.181);
+  transition: all ease-in 20ms;
 }
 
-.tech-stacks img {
-  height: 4rem;
+
+.tech-stacks {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  width: auto;
+}
+
+.single-tech .tech-logo img {
+ height:100%;
+  /* border: 1px solid black; */
   transition: transform 0.3s ease;
   cursor: pointer;
 }
 
-.tech-stacks img:hover,
-.tech-stacks img:active {
-  transform: rotate(-30deg) scale(1.5);
+
+
+.tech-logo{
+height: 100px;
+width: 100px;
+}
+
+.single-tech span{
+    font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.single-tech:hover,
+.singel-tech:active {
+  background-color: var(--main-color);
 }
 
 /* ############# ABOUT ME ############# */
 .section-About-me {
-  padding: 0 6rem;
+  padding: 4rem 6rem;
 }
 
 .about-me-container {
@@ -379,7 +409,7 @@ header {
 
 /* ############# MY WORKS ############# */
 .section-my-works {
-  padding: 3.2rem 5rem;
+  padding: 6rem 5rem;
   background-color: var(--main-color);
   margin-bottom: 3rem;
 }
@@ -457,7 +487,7 @@ header {
 /* ############# CONTACTS ############# */
 .section-contact {
   max-width: 65rem;
-  padding: 0 5rem;
+  padding: 4rem 5rem;
   margin: auto;
 }
 
@@ -793,33 +823,24 @@ strong {
 
   .tech-stacks-container {
     margin-top: 3rem;
-    flex-direction: column;
+    /* flex-direction: column; */
     justify-content: center;
   }
+
 
   .tech-stacks {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background-color: transparent;
-    box-shadow: none;
+   
     position: relative;
-    transform: translate(0, 0);
-    padding: 2rem 4rem;
-    gap: 1rem;
+    gap: 2rem;
   }
 
-  .tech-stacks img {
-    align-self: center;
-    flex-basis: calc(33.33% - 1rem);
-    margin-bottom: 1rem;
-  }
+ 
 
-  .tech-stacks img:hover,
-  .tech-stacks img:active {
-    transform: none;
-  }
+ 
 
   .section-About-me {
     padding: 2rem;

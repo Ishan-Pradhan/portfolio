@@ -5,7 +5,7 @@
 document
   .querySelector(".nav-links-container")
   .addEventListener("click", function (e) {
-    // console.log(e.target);
+    console.log(e.target);
 
     //matching strategy
     if (e.target.classList.contains("nav-link")) {
@@ -15,11 +15,11 @@ document
     }
   });
 
-const nav_height = document.querySelector("header").offsetHeight;
+const nav_height = document.querySelector("header").offsetHeight ;
 const sections = document.querySelectorAll(".scroll");
 
 sections.forEach((section) => {
-  section.style.scrollMarginTop = `${nav_height}px`;
+  section.style.scrollMarginTop = `${nav_height + 20}px `;
 });
 
 // FOR ALERT
