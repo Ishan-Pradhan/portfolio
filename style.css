@@ -316,17 +316,15 @@ header {
   justify-content: center;
   margin-bottom: 6rem;
   /* background-color: var(--sub-bg); */
-
 }
 
-.tech-stack-section{
-max-width: 107rem;
-padding: 0 6rem;
-margin :auto;
+.tech-stack-section {
+  max-width: 107rem;
+  padding: 0 6rem;
+  margin: auto;
 }
 
-
-.single-tech{
+.single-tech {
   display: flex;
   height: 12rem;
   width: 12rem;
@@ -340,7 +338,6 @@ margin :auto;
   transition: all ease-in 20ms;
 }
 
-
 .tech-stacks {
   display: flex;
   flex-wrap: wrap;
@@ -351,21 +348,19 @@ margin :auto;
 }
 
 .single-tech .tech-logo img {
- height:100%;
+  height: 100%;
   /* border: 1px solid black; */
   transition: transform 0.3s ease;
   cursor: pointer;
 }
 
-
-
-.tech-logo{
-height: 100px;
-width: 100px;
+.tech-logo {
+  height: 100px;
+  width: 100px;
 }
 
-.single-tech span{
-    font-size: 1.2rem;
+.single-tech span {
+  font-size: 1.2rem;
   font-weight: 600;
 }
 
@@ -383,13 +378,16 @@ width: 100px;
   /* max-width: 65rem; */
   /* margin: auto; */
   display: flex;
-  justify-content: space-between;
-  gap: 5.2rem;
+  justify-content: flex-start;
+  justify-content: center;
+  width: 100%;
+  position: relative;
 }
 
 .about-me-image-container {
-  width: 50%;
-  height: 420px;
+  max-width: 500px;
+  max-height: 300px;
+  position: relative;
 }
 
 .about-me-image {
@@ -401,10 +399,24 @@ width: 100px;
 }
 
 .about-me-text-container {
-  width: 50%;
+  width: calc(100% + 100px); /* Increase width to fill the space */
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
+  margin-top: 100px;
+  flex-grow: 1;
+  background-color: var(--background-color);
+  transform: translateX(-100px); /* Visually moves the container */
+  flex-grow: 1;
+  padding: 50px;
+  border-radius: 18px;
+  margin-right: -100px;
+  box-shadow: 5px 5px 15px 0.5px rgba(0, 0, 0, 0.148);
+  border: 1px solid rgba(227, 227, 227, 0.3);
+}
+
+.about-me-paragraphs {
+  line-height: 165%;
 }
 
 /* ############# MY WORKS ############# */
@@ -827,22 +839,19 @@ strong {
     justify-content: center;
   }
 
-
   .tech-stacks {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-   
+
     position: relative;
     gap: 2rem;
   }
 
- 
-  .tech-stack-section{
+  .tech-stack-section {
     padding: 0;
   }
- 
 
   .section-About-me {
     padding: 2rem;
@@ -850,22 +859,35 @@ strong {
 
   .about-me-container {
     width: 100%;
+
     flex-direction: column;
     gap: 2rem;
   }
 
   .about-me-image-container {
-    width: 100%;
+    height: 300px;
   }
 
   .about-me-image {
+    height: 100%;
     border-radius: 8px;
     margin: auto;
-    object-fit: bottom;
+    object-fit: end;
   }
 
   .about-me-text-container {
     width: 100%;
+    background-color: none;
+    flex-grow: none; /* Visually moves the container */
+    flex-grow: 0;
+    padding: 0;
+    border-radius: 0;
+    margin-right: 0;
+    box-shadow: none;
+    border: none;
+    background-color: #fff;
+    margin-top: 50px;
+    transform: none;
   }
 
   .section-my-works {
@@ -960,6 +982,19 @@ strong {
 
   .about-me-container {
     gap: 3rem;
+  }
+
+  .about-me-text-container {
+    width: 100%; /* Increase width to fill the space */
+
+    flex-grow: none;
+    transform: none; /* Visually moves the container */
+    flex-grow: 1;
+    padding: 0;
+    border-radius: none;
+    margin-right: 0;
+    box-shadow: none;
+    border: none;
   }
 
   .about-me-image {
