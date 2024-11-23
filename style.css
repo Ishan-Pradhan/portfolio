@@ -791,7 +791,7 @@ strong {
   .hero {
     flex-direction: column;
     gap: 3rem;
-    text-align: center;
+    /* text-align: center; */
     padding: 2rem;
   }
 
@@ -822,7 +822,7 @@ strong {
   }
 
   .social-links {
-    justify-content: center;
+    justify-content: left;
   }
 
   .social-links li a i {
@@ -973,6 +973,7 @@ strong {
 
   .hero {
     padding: 4rem;
+    text-align: left;
   }
 
   .hero-image img {
@@ -985,10 +986,10 @@ strong {
   }
 
   .about-me-text-container {
-    width: 100%; /* Increase width to fill the space */
+    width: 100%;
 
     flex-grow: none;
-    transform: none; /* Visually moves the container */
+    transform: none;
     flex-grow: 1;
     padding: 0;
     border-radius: none;
