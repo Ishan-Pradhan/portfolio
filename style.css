@@ -840,13 +840,38 @@ strong {
   }
 
   .tech-stacks {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* display: flex;
+    flex-wrap: wrap; */
     justify-content: center;
     align-items: center;
 
     position: relative;
     gap: 2rem;
+  }
+
+  .single-tech {
+    display: flex;
+    height: 6rem;
+    width: 6rem;
+    gap: 0.8rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 18px;
+    background-color: var(--sub-bg);
+    transition: all ease-in 20ms;
+  }
+
+  .single-tech span {
+    font-size: 75%;
+  }
+
+  .tech-logo {
+    height: 50px;
+    width: 50px;
   }
 
   .tech-stack-section {
