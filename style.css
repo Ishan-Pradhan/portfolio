@@ -399,19 +399,19 @@ header {
 }
 
 .about-me-text-container {
-  width: calc(100% + 100px); /* Increase width to fill the space */
+  width: calc(100% + 100px);
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
   margin-top: 100px;
   flex-grow: 1;
   background-color: var(--background-color);
-  transform: translateX(-100px); /* Visually moves the container */
+  transform: translateX(-100px);
   flex-grow: 1;
   padding: 50px;
   border-radius: 18px;
   margin-right: -100px;
-  box-shadow: 5px 5px 15px 0.5px rgba(0, 0, 0, 0.148);
+  box-shadow: 5px 5px 10px 0.5px rgba(0, 0, 0, 0.049);
   border: 1px solid rgba(227, 227, 227, 0.3);
 }
 
@@ -903,7 +903,7 @@ strong {
   .about-me-text-container {
     width: 100%;
     background-color: none;
-    flex-grow: none; /* Visually moves the container */
+    flex-grow: none;
     flex-grow: 0;
     padding: 0;
     border-radius: 0;
