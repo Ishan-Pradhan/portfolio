@@ -978,7 +978,6 @@ strong {
   }
 }
 
-/* For screens between 768px and 1023px (tablets) */
 @media (min-width: 768px) and (max-width: 1023px) {
   header {
     padding: 1.5rem 2rem;
@@ -1060,15 +1059,13 @@ strong {
   }
 }
 
-/*  SECTION CONTAINER  */
 .about-section {
   overflow: hidden;
-  padding-top: 80px;
+  padding-top: 30px;
   padding-bottom: 48px;
-  background-color: var(--about-white-color); /* Or #fff */
+  background-color: var(--about-white-color);
 }
 
-/* Dark Mode Styling (Optional - Apply via Class on Parent Element) */
 .about-section.dark {
   background-color: var(--about-dark-color);
   color: var(--about-white-color);
@@ -1082,7 +1079,6 @@ strong {
   color: var(--about-dark-6);
 }
 
-/* CONTAINER MODIFIER */
 .about-section .about-container {
   width: 100%;
   max-width: 1200px;
@@ -1090,11 +1086,10 @@ strong {
   padding: 0 20px;
 }
 
-/*  FLEX LAYOUT FOR CONTENT  */
 .about-content-wrapper {
   display: flex;
   flex-wrap: wrap;
-  margin-left: -16px; /* Compensate for padding on flex items */
+  margin-left: -16px;
   margin-right: -16px;
 }
 
@@ -1111,13 +1106,11 @@ strong {
   justify-content: space-between;
 }
 
-/*  COLUMN WIDTHS (RESPONSIVE)  */
 .about-col-full {
   width: 100%;
 }
 
 @media (min-width: 1024px) {
-  /* lg: */
   .about-col-lg-6 {
     width: 50%;
   }
@@ -1126,14 +1119,13 @@ strong {
 @media (min-width: 1280px) {
   /* xl: */
   .about-col-xl-5 {
-    width: calc(5 / 12 * 100%); /* Equivalent to 5/12 */
+    width: calc(5 / 12 * 100%);
   }
   .about-col-xl-half {
     width: 50%;
   }
 }
 
-/*  INNER FLEX LAYOUT FOR IMAGES  */
 .about-image-inner-flex {
   display: flex;
   margin-left: -12px;
@@ -1149,9 +1141,8 @@ strong {
   width: 50%;
 }
 
-/*  IMAGE STYLING  */
 .about-rounded-2xl {
-  border-radius: 12px; /* Equivalent to 2xl */
+  border-radius: 12px;
 }
 
 .about-image-container {
@@ -1174,9 +1165,8 @@ strong {
   z-index: -1;
 }
 
-/*  TEXT STYLING  */
 .about-text-lg {
-  font-size: 1.125rem; /* Equivalent to lg */
+  font-size: 1.125rem;
 }
 
 .about-font-semibold {
@@ -1188,7 +1178,7 @@ strong {
 }
 
 .about-text-3xl {
-  font-size: 1.875rem; /* Equivalent to 3xl */
+  font-size: 1.875rem;
 }
 
 .about-font-bold {
@@ -1215,18 +1205,17 @@ strong {
   margin-bottom: 32px;
 }
 
-/* Button Styling - (Use an existing button style or create a unique one here) */
 .about-get-started-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 12px 28px; /* Adjust padding as needed */
-  font-size: 1rem; /* Equivalent to base */
-  font-weight: 500; /* Equivalent to medium */
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 500;
   text-align: center;
   color: var(--about-white-color);
-  border: 1px solid transparent; /* added border width */
-  border-radius: 8px; /* Equivalent to rounded-md */
+  border: 1px solid transparent;
+  border-radius: 8px;
   background-color: var(--about-primary-color);
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -1234,16 +1223,14 @@ strong {
 }
 
 .about-get-started-button:hover {
-  background-color: rgba(48, 86, 211, 0.9); /* Hover state */
+  background-color: rgba(48, 86, 211, 0.9);
 }
 
-/*  SPACING  */
 .about-mt-10 {
   margin-top: 40px;
 }
 
 @media (min-width: 1024px) {
-  /* lg: */
   .about-mt-lg-0 {
     margin-top: 0;
   }
@@ -1266,7 +1253,6 @@ strong {
 }
 
 @media (min-width: 640px) {
-  /* sm: */
   .about-py-sm-4 {
     padding-top: 16px;
     padding-bottom: 16px;
