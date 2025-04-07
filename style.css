@@ -1059,3 +1059,239 @@ strong {
     line-height: 150%;
   }
 }
+
+/*  SECTION CONTAINER  */
+.about-section {
+  overflow: hidden;
+  padding-top: 80px;
+  padding-bottom: 48px;
+  background-color: var(--about-white-color); /* Or #fff */
+}
+
+/* Dark Mode Styling (Optional - Apply via Class on Parent Element) */
+.about-section.dark {
+  background-color: var(--about-dark-color);
+  color: var(--about-white-color);
+}
+
+.about-section.dark .about-text-dark {
+  color: var(--about-white-color);
+}
+
+.about-section.dark .about-text-body {
+  color: var(--about-dark-6);
+}
+
+/* CONTAINER MODIFIER */
+.about-section .about-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/*  FLEX LAYOUT FOR CONTENT  */
+.about-content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -16px; /* Compensate for padding on flex items */
+  margin-right: -16px;
+}
+
+.about-content-wrapper > div {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.about-items-center {
+  align-items: center;
+}
+
+.about-justify-between {
+  justify-content: space-between;
+}
+
+/*  COLUMN WIDTHS (RESPONSIVE)  */
+.about-col-full {
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  /* lg: */
+  .about-col-lg-6 {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1280px) {
+  /* xl: */
+  .about-col-xl-5 {
+    width: calc(5 / 12 * 100%); /* Equivalent to 5/12 */
+  }
+  .about-col-xl-half {
+    width: 50%;
+  }
+}
+
+/*  INNER FLEX LAYOUT FOR IMAGES  */
+.about-image-inner-flex {
+  display: flex;
+  margin-left: -12px;
+  margin-right: -12px;
+}
+
+.about-image-inner-flex > div {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.about-image-col-half {
+  width: 50%;
+}
+
+/*  IMAGE STYLING  */
+.about-rounded-2xl {
+  border-radius: 12px; /* Equivalent to 2xl */
+}
+
+.about-image-container {
+  position: relative;
+}
+
+.about-image-container .about-absolute {
+  position: absolute;
+}
+
+.about-image-container .about-bottom-7 {
+  bottom: 28px;
+}
+
+.about-image-container .about-right-7 {
+  right: 28px;
+}
+
+.about-image-container .about-z-neg-1 {
+  z-index: -1;
+}
+
+/*  TEXT STYLING  */
+.about-text-lg {
+  font-size: 1.125rem; /* Equivalent to lg */
+}
+
+.about-font-semibold {
+  font-weight: 600;
+}
+
+.about-text-primary {
+  color: var(--about-primary-color);
+}
+
+.about-text-3xl {
+  font-size: 1.875rem; /* Equivalent to 3xl */
+}
+
+.about-font-bold {
+  font-weight: bold;
+}
+
+.about-text-dark {
+  color: var(--about-dark-color);
+}
+
+.about-text-body {
+  color: var(--about-body-color);
+}
+
+.about-mb-4 {
+  margin-bottom: 16px;
+}
+
+.about-mb-5 {
+  margin-bottom: 20px;
+}
+
+.about-mb-8 {
+  margin-bottom: 32px;
+}
+
+/* Button Styling - (Use an existing button style or create a unique one here) */
+.about-get-started-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 28px; /* Adjust padding as needed */
+  font-size: 1rem; /* Equivalent to base */
+  font-weight: 500; /* Equivalent to medium */
+  text-align: center;
+  color: var(--about-white-color);
+  border: 1px solid transparent; /* added border width */
+  border-radius: 8px; /* Equivalent to rounded-md */
+  background-color: var(--about-primary-color);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.about-get-started-button:hover {
+  background-color: rgba(48, 86, 211, 0.9); /* Hover state */
+}
+
+/*  SPACING  */
+.about-mt-10 {
+  margin-top: 40px;
+}
+
+@media (min-width: 1024px) {
+  /* lg: */
+  .about-mt-lg-0 {
+    margin-top: 0;
+  }
+  .about-pt-lg-120 {
+    padding-top: 120px;
+  }
+  .about-pb-lg-90 {
+    padding-bottom: 90px;
+  }
+}
+
+.about-py-3 {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.about-my-4 {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+@media (min-width: 640px) {
+  /* sm: */
+  .about-py-sm-4 {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  .about-mx-sm-neg-4 {
+    margin-left: -16px;
+    margin-right: -16px;
+  }
+  .about-mx-sm-neg-3 {
+    margin-left: -12px;
+    margin-right: -12px;
+  }
+
+  .about-px-sm-4 {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .about-px-sm-3 {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .about-text-sm-40-48 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+}
