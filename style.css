@@ -440,11 +440,13 @@ header {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2rem;
+  width: 100%;
 }
 
 /* Card */
 .project-card {
   background: white;
+  width: 100%;
   border-radius: 16px;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
   overflow: hidden;
@@ -823,6 +825,11 @@ strong {
 
   .logo {
     height: 2rem;
+  }
+
+  .container {
+    margin: 0;
+    padding: 0;
   }
 
   .section-hero {
