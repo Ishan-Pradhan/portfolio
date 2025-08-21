@@ -5,8 +5,6 @@
 document
   .querySelector(".nav-links-container")
   .addEventListener("click", function (e) {
-    console.log(e.target);
-
     //matching strategy
     if (e.target.classList.contains("nav-link")) {
       e.preventDefault();
@@ -15,7 +13,7 @@ document
     }
   });
 
-const nav_height = document.querySelector("header").offsetHeight ;
+const nav_height = document.querySelector("header").offsetHeight;
 const sections = document.querySelectorAll(".scroll");
 
 sections.forEach((section) => {
@@ -97,7 +95,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Function to update the active class on navigation links
   const updateActiveLink = () => {
-    console.log("updateActiveLink called"); // Debugging line
     sections.forEach((section) => {
       const sectionTop = section.offsetTop;
       const sectionHeight = section.clientHeight;
