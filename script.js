@@ -1,127 +1,113 @@
-"use stricts";
+"use strict";
 
-// FOR SMOOTH SCROLLING
+// ── Element refs ─────────────────────────────────────────────────────────────
+const header        = document.getElementById("header");
+const burgerBtn     = document.getElementById("burger-btn");
+const mobileOverlay = document.getElementById("mobile-overlay");
+const mobileCloseBtn= document.getElementById("mobile-close-btn");
+const sections      = document.querySelectorAll("section[id]");
 
-document
-  .querySelector(".nav-links-container")
-  .addEventListener("click", function (e) {
-    //matching strategy
-    if (e.target.classList.contains("nav-link")) {
-      e.preventDefault();
-      const id = e.target.getAttribute("href");
-      document.querySelector(id).scrollIntoView({ behavior: "smooth" });
-    }
-  });
-
-const nav_height = document.querySelector("header").offsetHeight;
-const sections = document.querySelectorAll(".scroll");
-
-sections.forEach((section) => {
-  section.style.scrollMarginTop = `${nav_height + 20}px `;
-});
-
-// FOR ALERT
-
-// document.querySelector(".download-cv").addEventListener("click", function () {
-//   showAlert();
-// });
-
-// function showAlert() {
-//   var overlay = document.getElementById("overlay");
-//   overlay.style.display = "block";
-// }
-
-// function closeAlert() {
-//   var overlay = document.getElementById("overlay");
-//   overlay.style.display = "none";
-// }
-
-// FOR BURGER MENU
-
-const burgerMenu = document.querySelector(".burger-menu");
-const navLinks = document.querySelector(".nav-links");
-
-// Function to hide the menu
-function hideMenu() {
-  navLinks.classList.remove("active");
-  burgerMenu.classList.remove("active");
+// ── Open / close mobile menu ─────────────────────────────────────────────────
+function openMenu() {
+  mobileOverlay.classList.add("open");
+  mobileOverlay.removeAttribute("aria-hidden");
+  burgerBtn.setAttribute("aria-expanded", "true");
+  document.body.style.overflow = "hidden"; // prevent background scroll
 }
 
-// Toggle menu on burger menu click
-burgerMenu.addEventListener("click", function () {
-  navLinks.classList.toggle("active");
-  burgerMenu.classList.toggle("active");
+function closeMenu() {
+  mobileOverlay.classList.remove("open");
+  mobileOverlay.setAttribute("aria-hidden", "true");
+  burgerBtn.setAttribute("aria-expanded", "false");
+  document.body.style.overflow = "";
+}
+
+burgerBtn.addEventListener("click", openMenu);
+mobileCloseBtn.addEventListener("click", closeMenu);
+
+// Close on Escape key
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") closeMenu();
 });
 
-const navLinksContainer = document.querySelector(".nav-links-container");
-const links = navLinksContainer.querySelectorAll("a");
-
-links.forEach((link) => {
-  link.addEventListener("click", function () {
-    hideMenu();
+// ── Mobile nav links — smooth scroll + close menu ───────────────────────────
+document.querySelectorAll(".mobile-nav-link").forEach((link) => {
+  link.addEventListener("click", function (e) {
+    const href = this.getAttribute("href");
+    if (!href.startsWith("#")) return;
+    e.preventDefault();
+    closeMenu();
+    // Small delay so the overlay closes before scrolling
+    setTimeout(() => {
+      const target = document.querySelector(href);
+      if (target) target.scrollIntoView({ behavior: "smooth" });
+    }, 200);
   });
 });
 
-// section animation
-const allSections = document.querySelectorAll(".section");
-const revealSection = function (entries, observer) {
-  const [entry] = entries;
-
-  if (!entry.isIntersecting) return;
-  entry.target.classList.remove("section--hidden");
-  observer.unobserve(entry.target);
-};
-const sectionObserver = new IntersectionObserver(revealSection, {
-  root: null,
-  threshold: 0.15,
-});
-allSections.forEach(function (section) {
-  sectionObserver.observe(section);
-  section.classList.add("section--hidden");
-});
-
-// nav sticky
-window.addEventListener("scroll", function () {
-  var nav = document.querySelector("header");
-
-  nav.classList.toggle("sticky", window.scrollY > 100);
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  // Select all sections
-  const sections = document.querySelectorAll("section");
-  // Select all navigation links
-  const navLinks = document.querySelectorAll(".nav-link");
-
-  // Function to update the active class on navigation links
-  const updateActiveLink = () => {
-    sections.forEach((section) => {
-      const sectionTop = section.offsetTop;
-      const sectionHeight = section.clientHeight;
-      if (pageYOffset >= sectionTop - sectionHeight / 3) {
-        const id = section.getAttribute("id");
-        navLinks.forEach((navLink) => {
-          if (navLink.getAttribute("href") === `#${id}`) {
-            navLink.classList.add("active");
-          } else {
-            navLink.classList.remove("active");
-          }
-        });
-      }
-    });
-  };
-
-  // Set up the Intersection Observer
-  const observer = new IntersectionObserver(updateActiveLink, {
-    root: null,
-    threshold: 0.1,
+// ── Desktop nav links — smooth scroll ───────────────────────────────────────
+document.querySelectorAll(".nav-link").forEach((link) => {
+  link.addEventListener("click", function (e) {
+    const href = this.getAttribute("href");
+    if (!href.startsWith("#")) return;
+    e.preventDefault();
+    const target = document.querySelector(href);
+    if (target) target.scrollIntoView({ behavior: "smooth" });
   });
+});
 
-  // Observe each section
-  sections.forEach((section) => {
-    observer.observe(section);
-  });
-
-  // Update the active link when the page loads
+// ── Sticky / scrolled header ──────────────────────────────────────────────────
+window.addEventListener("scroll", () => {
+  header.classList.toggle("scrolled", window.scrollY > 60);
   updateActiveLink();
+}, { passive: true });
+
+// ── Active nav link highlight ─────────────────────────────────────────────────
+function updateActiveLink() {
+  const scrollY = window.scrollY;
+
+  sections.forEach((section) => {
+    const top    = section.offsetTop - 130;
+    const bottom = top + section.offsetHeight;
+    const id     = section.getAttribute("id");
+
+    // Desktop nav links
+    const desktopLink = document.querySelector(`.nav-link[href="#${id}"]`);
+    if (desktopLink) {
+      desktopLink.classList.toggle("active", scrollY >= top && scrollY < bottom);
+    }
+    // Mobile nav links
+    const mobileLink = document.querySelector(`.mobile-nav-link[href="#${id}"]`);
+    if (mobileLink) {
+      mobileLink.classList.toggle("active", scrollY >= top && scrollY < bottom);
+    }
+  });
+}
+
+// ── Section reveal (Intersection Observer) ────────────────────────────────────
+const revealSections = document.querySelectorAll(".section");
+
+const sectionObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.remove("section--hidden");
+      sectionObserver.unobserve(entry.target);
+    });
+  },
+  { root: null, threshold: 0.08 }
+);
+
+revealSections.forEach((section) => {
+  section.classList.add("section--hidden");
+  sectionObserver.observe(section);
 });
+
+// ── Initial state ─────────────────────────────────────────────────────────────
+updateActiveLink();
+
+// ── Dynamic Footer Year ───────────────────────────────────────────────────────
+const yearSpan = document.getElementById("current-year");
+if (yearSpan) {
+  yearSpan.textContent = new Date().getFullYear();
+}
